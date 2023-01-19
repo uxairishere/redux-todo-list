@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { deleteTask } from '../redux/todoSlice.redux'
 
@@ -14,7 +14,7 @@ const TodoItem = (props) => {
   return (
     <div className='todo-item-container'>
     <h3>{props.title}</h3>
-    <button className='btn btn-outline-danger' onClick={() => {removeTask()}}>Delete</button>
+    <button className='btn btn-outline-danger' onClick={() => {removeTask()}}><i className='bi bi-x-lg'></i></button>
     </div>
   )
 }

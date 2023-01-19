@@ -3,8 +3,8 @@ import TodoList from "./components/TodoList";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="app-title">Daily Tasks</h1>
+    <div className="app dark">
+      <h1 className="app-title">Daily Tasks <i class="bi bi-list-task"></i></h1>
       <AddTodo/>
       <TodoList/>
     </div>

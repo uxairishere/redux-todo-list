@@ -24,12 +24,12 @@ const AddTodo = () => {
   return (
     <div className='add-task-container'>
     <input
-        className='add-task-input'
+        className='add-task-input form-control'
         placeholder='Enter your task...'
         onChange={(event) => setValue(event.target.value)}
         value={value}
     />
-    <button className='btn btn-dark' onClick={onSubmit}>Save</button>
+    <button className='btn btn-dark' onClick={onSubmit}>Save <i class="bi bi-cloud-download-fill"></i></button>
     </div>
   )
 }
