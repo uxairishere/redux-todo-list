@@ -13,10 +13,15 @@ export const taskSlice = createSlice({
         },
         deleteTask: (state, action) => {
             return state.filter((item) => item.id !== action.payload.id)
+        },
+        updateTask: (state, action) => {
+            state.find(value => value.id === action.payload.id).name = action.payload.value;
+            console.log("VALUE UPDATE");
         }
+
     }
 })
 
-export const {addTask, deleteTask} = taskSlice.actions;
+export const {addTask, deleteTask, updateTask} = taskSlice.actions;
 
 export default taskSlice.reducer;

@@ -56,12 +56,23 @@ body {
 
 }
 
+.update-task-input{
+    border-radius: 30px;
+    background-color: rgb(0, 128, 0, 0.1);
+    border: none;
+
+}
+.update-container{
+    margin-top: 1rem;
+}
+
 @media (max-aspect-ratio: 3/2) {
     .app {
       width: 90%;
     }
     .todo-item-container{
         text-align: center;
+        background-color: white;
         h3{
             display: block;
         }
