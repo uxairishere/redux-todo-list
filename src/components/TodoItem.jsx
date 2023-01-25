@@ -14,17 +14,17 @@ const TodoItem = (props) => {
   }
 
   const showUpdate = () => {
-    document.getElementById('updateSection').classList.remove('d-none');
+    document.getElementById(props.id).classList.remove('d-none');
   }
 
   const edittask = (id) => {
     dispatch(
       updateTask({
-        id: id,
+        id: props.id,
         value: value
       })
     )
-    document.getElementById('updateSection').classList.add('d-none');
+    document.getElementById(props.id).classList.add('d-none');
 
   }
   return (
@@ -34,7 +34,7 @@ const TodoItem = (props) => {
       <button className='btn btn-outline-success' onClick={() => { showUpdate() }}><i class="bi bi-pencil-square"></i></button>
 
       {/* update  */}
-      <div id='updateSection' className='updateDiv d-none'>
+      <div id={props.id} key={props.id} className='updateDiv d-none'>
         <div class="input-group update-container mb-3">
           <input
             type='text'

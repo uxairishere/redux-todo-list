@@ -6,7 +6,7 @@ export const taskSlice = createSlice({
     reducers: {
         addTask: (state, action) => {
             const newTask = {
-                id: new Date(),
+                id: new Date().getTime(),
                 name: action.payload.task
             }
             state.push(newTask);
